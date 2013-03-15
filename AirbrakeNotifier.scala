@@ -10,7 +10,7 @@ object AirbrakeNotifier {
   val API_KEY = "YOUR API KEY HERE"
   
   def createConnection : HttpURLConnection = {
-    val connection = new URL("http://airbrakeapp.com/notifier_api/v2/notices").openConnection.asInstanceOf[HttpURLConnection]
+    val connection = new URL("http://api.airbrake.io/notifier_api/v2/notices").openConnection.asInstanceOf[HttpURLConnection]
     connection.setDoOutput(true);
     connection.setRequestProperty("Content-type", "text/xml");
     connection.setRequestProperty("Accept", "text/xml, application/xml");
